@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="style/main.css">
-
     <link rel="stylesheet" href="style/responsive.css">
-
     <!--OWL CSS-->
     <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
-
-
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Netflix Clone</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h2 class="logo">Netflix</h2>
+            <a href="#"><img src="img/netflix-logo.png" width="200px" class="logo"></a>
             <nav>
                 <a href="#">Inicio</a>
                 <a href="#">Séries</a>
@@ -33,25 +28,44 @@
     <main>
         <div class="filme-principal">
             <div class="container">
-                <h3 class="titulo">HOUSE OF CARDS</h3>
-                <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA neste drama vencedor do Emmy e do Globo de Ouro.</p>
+                <div class="details">
+                    <h3 class="titulo">HOUSE OF CARDS</h3>
+                    <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA neste drama vencedor do Emmy e do Globo de Ouro.</p>
+                </div>
                 <div class="botoes"> 
-                    <button role="button" class="botao"> <i class="fas fa-play"></i>
-                        ASSISTIR AGORA
-                       
-
+                    <button role="button" class="botao botao-assistir">
+                        <span style="display: flex; align-items:center;">
+                            <i class="fas fa-play"></i>
+                            <span style="display: flex; align-items: center; justify-content: center; padding-left: 5px;"><strong>Assistir Agora</strong></span>
+                        </span>
                     </button>
                        
-                    <button role="button" class="botao">  <i class="fas fa-info-circle"></i> 
-                        MAIS INFORMAÇÕES
+                    <button role="button" class="botao botao-info">
+                        <span style="display: flex; align-items:center"><svg height="20px" viewBox="0 0 24 24">
+                            <path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-2 0a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8zm-9 6v-7h2v7h-2zm1-8.75a1.21 1.21 0 0 1-.877-.364A1.188 1.188 0 0 1 10.75 8c0-.348.123-.644.372-.886.247-.242.54-.364.878-.364.337 0 .63.122.877.364.248.242.373.538.373.886s-.124.644-.373.886A1.21 1.21 0 0 1 12 9.25z" fill="currentColor"></path></svg></i>
+                            <span style="display: flex; align-items: center; justify-content: center; padding-left: 5px;"><strong>Mais Informações</strong></span>
+                        </span>
                     </button>
                 </div>
-        </div>
-           
+            </div>
         </div>
     </main>
+    
 
     <div class="carrosel-filmes">
+        <div class="category" id="category">
+            <div class="originals" id="originals">
+                <h3>Netflix Originals</h3>
+            </div>
+            <div class="explorar" id="explorar">
+                <div>
+                    <h4 style="margin: 10px">Explorar todos</h4>
+                </div>
+                <div>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
         <div class="owl-carousel">
             <div class="item">
                 <img src="img/mini1.jpg" alt="" srcset="">
@@ -85,14 +99,16 @@
             </div>
         </div>
     </div>
-
-
-
-
     <script src="https://kit.fontawesome.com/75b8563609.js" crossorigin="anonymous"></script>
     <script src="js/owl/jquery.min.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/setup.js"></script>
-
+    <script>
+    $('.owl-carousel').owlCarousel({
+        items:1,
+        margin:10,
+        autoHeight:true
+    });
+    </script>
 </body>
 </html>
