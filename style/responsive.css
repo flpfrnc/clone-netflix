@@ -9,18 +9,19 @@ header .container {
 }
 
 .filme-principal {
-    background-size:contain;
-    height: 80vh;
+    font-size: 16px;
+    background-size: 110% 100%;
+    box-shadow: 0px -30px 30px 0px var(--preta) inset;    
     width: 100vw;
 }
 
-.filme-principal .container {
-    margin-top: 20vh;
-    width: 100%;
+.filme-principal > .container {
+    margin-top: 15vh;
+    width: 50vh;
 }
 
 .carrosel-filmes {
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
 header nav {
@@ -32,4 +33,61 @@ header nav a {
     color: #AAA;
     margin: 1rem;
 }
+}
+
+@media only screen and (max-width: 900px){
+    .filme-principal {
+        font-size: 16px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        box-shadow: 0px -30px 30px 0px var(--preta) inset;    
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .filme-principal {
+        font-size: 16px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: 0px -30px 30px 0px var(--preta) inset;    
+        height: 100%;
+        width: 100%;
+    }
+
+    button.botao.botao-assistir > span {
+        transform: translateY(-50%);
+        font-size: 2vw;
+    }
+
+    button.botao.botao-info > span {
+        transform: translateY(-50%);
+        font-size: 2vw;
+    }
+
+    .botoes {
+        padding: 6vh;
+        padding-top: 0;
+        display: flex;
+    }
+
+    .botoes .botao {
+        height: 2vh;
+    }
+
+    .filme-principal .descricao {
+        padding: 6vh;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        font-size: 2vw;
+    }
+
+    .titulo {
+        padding: 6vh;
+        padding-bottom: 0;
+        font-size: 5vw;
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+    }
 }
